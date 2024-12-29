@@ -1,0 +1,21 @@
+{
+	"root": true,
+	"env": {
+		"node": true,
+		"jest": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2022,
+		"sourceType": "module"
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js"]
+			}
+		}
+	},
+	"extends": ["prettier", "eslint:recommended", "plugin:import/recommended", "plugin:prettier/recommended"],
+	"ignorePatterns": [".eslintrc.json"],
+	"rules": {}
+}
