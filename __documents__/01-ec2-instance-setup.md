@@ -58,7 +58,7 @@
 - 키 페어 생성 다이얼로그에서 필요한 값 입력
 - 키 파일 자동 다운로드 → 안전하게 보관
 
-![Create Key Pair](./images/create-key-pair.png)
+<img src="./images/create-key-pair.png" alt="Create Key Pair" width="600" />
 
 > ⚠️ **Key Pair 주의사항**:
 >
@@ -88,7 +88,7 @@
 설정을 마친 후 오른쪽 요약 섹션에서 설정 정보를 확인
 확인되었다면 **인스턴스 시작** 버튼 클릭
 
-![EC2 Instance Summary](./images/ec2-instance-summary.png)
+<img src="./images/ec2-instance-summary.png" alt="EC2 Instance Summary" width="600" />
 
 인스턴스가 생성되면 EC2 대시보드에서 확인 가능
 
