@@ -94,10 +94,10 @@
 
 <br />
 
-## 2. 인스턴스 세부 정보 확인
+## 인스턴스 세부 정보 확인
 
-생성된 인스턴스의 ID를 클릭하여 세부 정보 확인
-Public IP 주소를 복사하여 외부에서 접근 가능
+- 생성된 인스턴스의 ID를 클릭하여 세부 정보 확인
+- `퍼블릭 IPv4 주소`를 복사하여 외부에서 접근 가능
 
 > **172로 시작하는 IP**는 내부 IP로, 외부 접근 불가하며 동일 네트워크 내 인스턴스에서만 접근 가능
 
@@ -109,11 +109,21 @@ Public IP 주소를 복사하여 외부에서 접근 가능
 
    ```bash
    mkdir ~/keys
-   mv ~/Downloads/react-api-server.pem ~/keys
-   chmod 400 ~/keys/react-api-server.pem
+   mv ~/Downloads/{{KEY_NAME}}.pem ~/keys
+   chmod 400 ~/keys/{{KEY_NAME}}.pem
    ```
 
 2. 아래 명령어로 SSH 접속:
+
    ```bash
-   ssh -i ~/keys/react-api-server.pem ec2-user@<PublicIP>
+   # 로그인에 사용할 기본 사용자 이름은 ec2-user
+   ssh -i ~/keys/{{KEY_NAME}}.pem ec2-user@{{PUBLIC_IP}}
+   ```
+
+   3. 핑거프린트 등록:
+
+   ```bash
+   # 최초 SSH 접속 시 다음 문구 노출
+   # Are you sure you want to continue connecting (yes/no/[fingerprint])?
+   yes
    ```
