@@ -2,19 +2,23 @@
 
 ### 1. Nginx 설치
 
-**Amazon Linux 2023 (AL2023) AMI**에서는 다음 명령어로 nginx를 설치
+**Amazon Linux 2023 (AL2023) AMI**에서는 다음 명령어로 `nginx`를 설치한다.
 
 ```bash
 sudo yum install nginx
 ```
 
+<br />
+
 ### 2. Nginx 설정 파일 수정
 
-설치 후, nginx 설정 파일을 수정
+설치 후, **nginx 설정 파일**을 수정
 
 ```bash
 sudo vi /etc/nginx/nginx.conf
 ```
+
+<br />
 
 아래 내용을 `location` 블록에 추가
 
@@ -47,11 +51,14 @@ sudo nginx -t
 # nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
+<br />
+
 오류가 있을 경우 메시지를 참고하여 수정하면 된다.
 <br />
 설정이 성공하면 nginx 서비스를 시작하고 부팅 시 자동 실행되도록 설정한다.
 
 ```bash
+# 최초 시작 시
 sudo systemctl start nginx
 sudo systemctl enable nginx
 curl localhost

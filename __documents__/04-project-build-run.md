@@ -1,8 +1,10 @@
 ## 프로젝트 빌드와 실행
 
-서버에서는 React 애플리케이션을 빌드한 후, 결과물을 backend/public 경로로 복사하여 API 서버와 함께 실행한다.
+서버에서는 React 애플리케이션을 빌드한 후, 결과물을 **backend/public** 경로로 복사하여 API 서버와 함께 실행한다.
 <br />
-이를 위해 `pm2`를 사용해 Node.js 서버를 관리한다.
+이를 위해 [pm2](https://pm2.keymetrics.io/)를 사용해 Node.js 서버를 관리한다.
+
+<br />
 
 ### 1. pm2 설치
 
