@@ -120,7 +120,7 @@
    ssh -i ~/keys/{{KEY_NAME}}.pem ec2-user@{{PUBLIC_IP}}
    ```
 
-   3. 핑거프린트 등록:
+3. 핑거프린트 등록:
 
    ```bash
    # 최초 SSH 접속 시 다음 문구 노출
