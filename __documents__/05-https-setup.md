@@ -28,6 +28,38 @@
 
 <br />
 
+#### nginx 설정
+
+nginx.conf 파일에서 server_name 내용을 연결한 도메인으로 변경해야 한다.
+
+```bash
+sudo vi /etc/nginx/nginx.conf
+```
+
+<br />
+
+`server` 블록에 server_name을 내 도메인으로 변경
+
+```
+server {
+    server_name  chan9yu.duckdns.org;
+    ...
+}
+```
+
+<br />
+
+수정을 마친 후, nginx 설정을 테스트
+
+```bash
+sudo nginx -t
+
+# nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+# nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+
+<br />
+
 #### 인증서 발급 절차
 
 1. root 권한 전환
@@ -79,6 +111,7 @@
 LetsEncrypt 인증서는 유효기간이 90일이므로, 자동 갱신 스케줄을 설정해야 한다.
 
 ```bash
+# 하루에 두 번, 0시와 12시에 certbot renew 명령어를 실행하여 인증서를 자동 갱신
 echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null
 
 cat /etc/crontab
