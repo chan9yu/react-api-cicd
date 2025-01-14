@@ -19,7 +19,8 @@ sudo yum install git htop -y
 
 1. [Node.js 다운로드 페이지](https://nodejs.org/ko/download)에 접속
 1. 원하는 버전을 선택하고, `x64` 아키텍처의 `Linux` 환경으로 설정한 후 다운로드 버튼의 링크를 복사
-   <img src="./images/nodejs-download.png" alt="Node.js Download" width="500" />
+	 <br /><br />
+   <img src="./images/nodejs-download.png" alt="Node.js Download" width="600" />
 1. 서버에서 다음 명령어를 실행해 Node.js를 다운로드하고 압축을 해제:
 
    ```bash
@@ -42,15 +43,15 @@ sudo yum install git htop -y
    vi ~/.bash_profile
    ```
 
-   <img src="./images/update-bash_profile.png" alt="Update .bash_profile" />
+   <img src="./images/update-bash_profile.png" alt="Update .bash_profile" width="500" />
 
-1. .bash_profile 업데이트 후 적용:
+1. **.bash_profile** 업데이트 후 적용:
 
    ```bash
    source ~/.bash_profile
    ```
 
-1. 설치 확인:
+1. Node.js 설치 확인:
 
    ```bash
    node -v # v20.18.1
