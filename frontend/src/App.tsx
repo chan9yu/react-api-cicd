@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import reactLogo from './assets/react.svg';
 import './styles/App.css';
@@ -6,6 +6,13 @@ import viteLogo from '/vite.svg';
 
 export default function App() {
 	const [count, setCount] = useState(0);
+	const [data, setData] = useState('');
+
+	useEffect(() => {
+		fetch(`${import.meta.env.VITE_API_SERVER}/api/hello`)
+			.then(response => response.json())
+			.then(data => setData(JSON.stringify(data)));
+	}, []);
 
 	return (
 		<>
@@ -22,6 +29,9 @@ export default function App() {
 				<button onClick={() => setCount(count => count + 1)}>count is {count}</button>
 				<p>
 					Edit <code>src/App.tsx</code> and save to test HMR
+				</p>
+				<p>
+					/api/hello: <code>{data}</code>
 				</p>
 			</div>
 			<p className="read-the-docs">Click on the Vite and React logos to learn more</p>
