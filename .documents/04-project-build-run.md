@@ -33,6 +33,6 @@ cp -rf dist/* ../backend/public
 ```bash
 cd ../backend/
 npm i
-pm2 start bin/www --name web
+pm2 start bin/www --name react-api-cicd
 pm2 list
 ```
